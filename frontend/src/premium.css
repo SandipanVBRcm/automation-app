@@ -1,0 +1,84 @@
+/* Subtle gradients on the existing Orbit design. Layout and component sizing stay in their original styles. */
+.sidebar {
+  background: linear-gradient(160deg, #f1f3ef 0%, #edf2eb 100%);
+}
+
+header {
+  background: linear-gradient(105deg, #fbfcfa 0%, #f6f9f3 100%);
+}
+
+.chat-pane {
+  background: radial-gradient(ellipse at 50% 37%, #f8faf5 0%, #fbfcfa 72%);
+}
+
+.browser-pane {
+  background: linear-gradient(165deg, #f6f8f3 0%, #f0f5ed 100%);
+}
+
+.new-chat,
+.primary,
+.send-button {
+  background: linear-gradient(135deg, #2d5841 0%, #244c3b 100%);
+}
+
+.new-chat:hover,
+.primary:hover:not(:disabled),
+.send-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #376a50 0%, #2b5742 100%);
+}
+
+.suggestions button,
+.skill-tile {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fbf5 100%);
+}
+
+.composer,
+.model-picker {
+  background: linear-gradient(145deg, #ffffff 0%, #fbfdf9 100%);
+}
+
+.settings-modal,
+.skills-modal,
+.files-modal,
+.knowledge-modal,
+.source-modal {
+  background: linear-gradient(155deg, #fafcf7 0%, #f4f8f0 100%);
+}
+
+.activity-heading,
+.rag-health {
+  background: linear-gradient(100deg, #f0f5ea 0%, #eaf2e5 100%);
+}
+
+[data-theme=dark] .sidebar {
+  background: linear-gradient(160deg, #1c261e 0%, #202d22 100%);
+}
+
+[data-theme=dark] header {
+  background: linear-gradient(105deg, #171e18 0%, #1c281e 100%);
+}
+
+[data-theme=dark] .chat-pane {
+  background: radial-gradient(ellipse at 50% 37%, #1c281d 0%, #171e18 72%);
+}
+
+[data-theme=dark] .browser-pane {
+  background: linear-gradient(165deg, #1d281e 0%, #223024 100%);
+}
+
+[data-theme=dark] .suggestions button,
+[data-theme=dark] .skill-tile,
+[data-theme=dark] .composer,
+[data-theme=dark] .model-picker,
+[data-theme=dark] .settings-modal,
+[data-theme=dark] .skills-modal,
+[data-theme=dark] .files-modal,
+[data-theme=dark] .knowledge-modal,
+[data-theme=dark] .source-modal {
+  background: linear-gradient(150deg, #222e22 0%, #273629 100%);
+}
+
+[data-theme=dark] .activity-heading,
+[data-theme=dark] .rag-health {
+  background: linear-gradient(105deg, #253523 0%, #2a3a27 100%);
+}

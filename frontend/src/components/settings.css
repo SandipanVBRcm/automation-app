@@ -1,0 +1,287 @@
+.settings-modal {
+  width: 480px;
+  max-height: min(calc(100dvh - 32px), 720px);
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.settings-modal h2 {
+  margin: 12px 0 8px;
+}
+
+.settings-modal .settings-intro {
+  margin: 0 0 24px;
+  line-height: 1.65;
+}
+
+.settings-section-title {
+  margin-bottom: 8px;
+  color: #879783;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 1.4px;
+}
+
+.settings-providers {
+  border-top: 1px solid #e4ebdf;
+}
+
+.settings-providers .provider-row {
+  min-height: 54px;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.settings-providers .provider-row > div {
+  min-width: 0;
+}
+
+.settings-providers .provider-row strong,
+.settings-providers .provider-row small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.settings-providers .provider-row > span {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.settings-controls-title {
+  margin-top: 23px;
+}
+
+.settings-controls {
+  border: 1px solid #e3eadf;
+  border-radius: 9px;
+  padding: 3px 14px;
+  background: #f7faf5;
+}
+
+.settings-control-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 104px;
+  align-items: center;
+  gap: 16px;
+  min-height: 45px;
+  color: #60745d;
+  font-size: 11px;
+}
+
+.settings-control-row + .settings-control-row {
+  border-top: 1px solid #e6ecdf;
+}
+
+.settings-control-row input {
+  width: 100%;
+  height: 30px;
+  padding: 5px 9px;
+  border: 1px solid #d7e2d1;
+  border-radius: 5px;
+  background: #fff;
+  color: #405d3b;
+  text-align: right;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.settings-control-row input:focus {
+  outline: 2px solid #8caf81;
+  outline-offset: 1px;
+}
+
+.settings-input-unit {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.settings-input-unit input {
+  width: 70px;
+}
+
+.settings-input-unit > span {
+  color: #82927e;
+  font-size: 10px;
+}
+
+.settings-status strong {
+  color: #66835c;
+  font-size: 10px;
+  font-weight: 550;
+  text-align: right;
+}
+
+.settings-mcp-title {
+  margin-top: 20px;
+}
+
+.settings-mcp-list {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-mcp-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 10px 14px;
+  border: 1px solid #e3eadf;
+  border-radius: 9px;
+  background: #f7faf5;
+}
+
+.settings-mcp-detail {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-mcp-detail strong {
+  color: #405d3b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.settings-mcp-detail span,
+.settings-mcp-state {
+  color: #82927e;
+  font-size: 10px;
+}
+
+.settings-switch {
+  width: 36px;
+  height: 21px;
+  flex-shrink: 0;
+  padding: 3px;
+  border-radius: 20px;
+  background: #b8c3b3;
+  transition: background-color .15s;
+}
+
+.settings-switch[aria-checked=true] {
+  background: #477a59;
+}
+
+.settings-switch > span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform .15s;
+}
+
+.settings-switch[aria-checked=true] > span {
+  transform: translateX(15px);
+}
+
+.settings-mcp-note {
+  margin: 7px 2px 0;
+  color: #82927e;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.settings-modal .settings-fine {
+  margin: 18px 0;
+  line-height: 1.6;
+}
+
+.settings-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.settings-actions button {
+  min-height: 36px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.settings-actions .settings-done {
+  width: auto;
+  border: 1px solid #dbe5d6;
+  background: transparent;
+  color: #60745d;
+}
+
+.settings-actions .settings-save {
+  padding: 9px 12px;
+}
+
+.settings-actions button:not(:disabled):hover {
+  filter: brightness(1.07);
+}
+
+.settings-error {
+  margin-top: 12px;
+  color: #a76a50;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+[data-theme=dark] .settings-providers,
+[data-theme=dark] .settings-control-row + .settings-control-row {
+  border-color: #3a4b30;
+}
+
+[data-theme=dark] .settings-controls {
+  border-color: #3d5032;
+  background: #1d281e;
+}
+
+[data-theme=dark] .settings-mcp-row {
+  border-color: #3d5032;
+  background: #1d281e;
+}
+
+[data-theme=dark] .settings-mcp-detail strong {
+  color: #c2d1b8;
+}
+
+[data-theme=dark] .settings-mcp-detail span,
+[data-theme=dark] .settings-mcp-state,
+[data-theme=dark] .settings-mcp-note {
+  color: #a9baa0;
+}
+
+[data-theme=dark] .settings-modal .settings-intro,
+[data-theme=dark] .settings-modal .settings-fine {
+  color: #adbea5;
+}
+
+[data-theme=dark] .settings-modal code {
+  color: #bbd7a7;
+}
+
+[data-theme=dark] .settings-control-row,
+[data-theme=dark] .settings-actions .settings-done {
+  color: #c2d1b8;
+}
+
+[data-theme=dark] .settings-control-row input {
+  border-color: #4b6042;
+  background: #293729;
+  color: #e3eddb;
+}
+
+[data-theme=dark] .settings-status strong {
+  color: #b4d3a2;
+}
+
+[data-theme=dark] .settings-actions .settings-done {
+  border-color: #4a6040;
+}
+
+@media (max-width: 480px) {
+  .settings-modal {
+    padding: 25px 22px;
+  }
+}
